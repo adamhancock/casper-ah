@@ -20,9 +20,11 @@
     {{#if @site.secondary_navigation}}
     {{navigation type="secondary"}}
     {{else}}
-    <div class="social-links">
+    <div class="social-links" style>
       <a class="social-link social-link-linkedin" href="https://www.linkedin.com/in/adam-hancock/" title="Linked"
         target="_blank" rel="noopener">{{> "icons/linkedin"}}</a>
+      <a class="social-link social-link-github" href="https://www.github.com/adamhancock" title="Github" target="_blank"
+        rel="noopener">{{> "icons/github"}}</a>
       {{#if @site.facebook}}
       <a class="social-link social-link-fb" href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank"
         rel="noopener">{{> "icons/facebook"}}</a>
