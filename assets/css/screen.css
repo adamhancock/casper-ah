@@ -26,10 +26,9 @@ production stylesheet in assets/built/screen.css
 
 */
 
-
 /* 1. Global - Set up the things
 /* ---------------------------------------------------------- */
-@import "global.css";
+@import 'global.css';
 
 body {
   background: #fff;
@@ -49,7 +48,6 @@ body {
   position: absolute;
   text-indent: -9999px;
 }
-
 
 /* 2. Layout - Page building blocks
 /* ---------------------------------------------------------- */
@@ -74,7 +72,7 @@ body {
 /* Centered content container blocks */
 .inner {
   margin: 0 auto;
-  max-width: 1040px;
+  max-width: 1350px;
   width: 100%;
 }
 
@@ -92,7 +90,6 @@ body {
 /* ---------------------------------------------------------- */
 
 @media (min-width: 900px) {
-
   .home-template .post-feed,
   .tag-template .post-feed,
   .author-template .post-feed {
@@ -105,7 +102,6 @@ body {
     position: relative;
   }
 }
-
 
 /* 4. Site Header
 /* ---------------------------------------------------------- */
@@ -120,7 +116,7 @@ body {
 }
 
 .site-header-background:before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   right: 0;
@@ -132,7 +128,7 @@ body {
 }
 
 .site-header-background:after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   right: 0;
@@ -164,7 +160,7 @@ body {
   z-index: 10;
   margin: 0 0 0 -2px;
   padding: 0;
-  font-size: 5.0rem;
+  font-size: 5rem;
   line-height: 1em;
   font-weight: 600;
 }
@@ -208,7 +204,6 @@ body {
   font-weight: 300;
 }
 
-
 /* 4.2 Archive header (tag and author post lists)
 /* ---------------------------------------------------------- */
 
@@ -225,20 +220,18 @@ body {
   padding-bottom: 0;
   color: var(--darkgrey);
   background: #fff;
-  opacity: 1.0;
+  opacity: 1;
 }
 
 .site-archive-header .no-image .site-description {
   color: var(--midgrey);
-  opacity: 1.0;
+  opacity: 1;
 }
-
 
 .site-archive-header .no-image .site-header-content {
   padding: 5vw 0 10px;
   border-bottom: 1px solid color(var(--lightgrey) l(+12%));
 }
-
 
 /* Special header styles for smaller screens */
 
@@ -261,7 +254,6 @@ body {
     min-height: unset;
   }
 }
-
 
 /* 5. Site Navigation
 /* ---------------------------------------------------------- */
@@ -292,9 +284,10 @@ body {
   display: flex;
 }
 
-.site-header-background:not(.responsive-header-img) .site-nav-left-wrapper:after,
+.site-header-background:not(.responsive-header-img)
+  .site-nav-left-wrapper:after,
 .site-nav-main .site-nav-left-wrapper:after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   z-index: 1000;
@@ -302,10 +295,15 @@ body {
   height: 100%;
 }
 
-.site-header-background:not(.responsive-header-img) .site-nav-left-wrapper:after,
+.site-header-background:not(.responsive-header-img)
+  .site-nav-left-wrapper:after,
 .site-nav-main .site-nav-left-wrapper:after {
   right: 0;
-  background: linear-gradient(to right, color(var(--darkgrey) l(-5%) a(0)) 0%, color(var(--darkgrey) l(-5%)) 100%);
+  background: linear-gradient(
+    to right,
+    color(var(--darkgrey) l(-5%) a(0)) 0%,
+    color(var(--darkgrey) l(-5%)) 100%
+  );
 }
 
 .site-nav-left {
@@ -378,7 +376,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
   margin: 0 0 0 -12px;
   padding: 0;
   list-style: none;
-  transition: all 1.0s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .nav li {
@@ -402,7 +400,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 }
 
 .nav li a:before {
-  content: "";
+  content: '';
   position: absolute;
   right: 100%;
   bottom: 8px;
@@ -433,7 +431,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
   font-weight: 400;
   text-transform: none;
   opacity: 0;
-  transition: all 1.0s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
   transform: translateY(175%);
 }
 
@@ -442,7 +440,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 }
 
 .nav-post-title.dash:before {
-  content: "– ";
+  content: '– ';
   opacity: 0.5;
 }
 
@@ -492,7 +490,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 }
 
 .social-link:hover {
-  opacity: 1.0;
+  opacity: 1;
 }
 
 .social-link svg {
@@ -532,7 +530,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
   opacity: 1;
 }
 
-.site-nav-right .nav+.subscribe-button {
+.site-nav-right .nav + .subscribe-button {
   margin-left: 24px;
 }
 
@@ -586,7 +584,6 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     display: none;
   }
 }
-
 
 /* 6. Post Feed
 /* ---------------------------------------------------------- */
@@ -748,7 +745,8 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
   white-space: nowrap;
   background: var(--darkgrey);
   border-radius: 3px;
-  box-shadow: rgba(39, 44, 49, 0.08) 0 12px 26px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
+  box-shadow: rgba(39, 44, 49, 0.08) 0 12px 26px,
+    rgba(39, 44, 49, 0.03) 1px 3px 8px;
   opacity: 0;
   transition: all 0.35s cubic-bezier(0.4, 0.01, 0.165, 0.99);
   transform: translateY(6px);
@@ -756,7 +754,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 }
 
 .author-list-item:hover .author-name-tooltip {
-  opacity: 1.0;
+  opacity: 1;
   transform: translateY(0px);
 }
 
@@ -884,7 +882,6 @@ make sure this only happens on large viewports / desktop-ish devices.
   }
 }
 
-
 /* Adjust some margins for smaller screens */
 @media (max-width: 1170px) {
   .post-card {
@@ -911,7 +908,6 @@ make sure this only happens on large viewports / desktop-ish devices.
     font-size: 1.6rem;
   }
 }
-
 
 /* 7. Single Post
 /* ---------------------------------------------------------- */
@@ -1009,7 +1005,7 @@ make sure this only happens on large viewports / desktop-ish devices.
   padding: 0 170px 6vw;
   min-height: 230px;
   font-family: Georgia, serif;
-  font-size: 2.0rem;
+  font-size: 2rem;
   line-height: 1.6em;
   background: #fff;
 }
@@ -1062,7 +1058,6 @@ make sure this only happens on large viewports / desktop-ish devices.
 }
 
 @media (max-width: 500px) {
-
   .post-full-content p,
   .post-full-content ul,
   .post-full-content ol,
@@ -1118,13 +1113,11 @@ make sure this only happens on large viewports / desktop-ish devices.
 }
 
 @media (max-width: 1040px) {
-
   .post-full-content img,
   .post-full-content video {
     width: 100%;
   }
 }
-
 
 /* Full bleed images (#full)
 Super neat trick courtesy of @JoelDrapper
@@ -1134,11 +1127,10 @@ Usage (In Ghost edtior):
 ![img](/some/image.jpg#full)
 
 */
-.post-full-content img[src$="#full"] {
+.post-full-content img[src$='#full'] {
   max-width: none;
   width: 100vw;
 }
-
 
 /* Image captions
 
@@ -1148,13 +1140,12 @@ Usage (In Ghost editor):
 <small>Your image caption</small>
 
 */
-.post-full-content img+br+small {
+.post-full-content img + br + small {
   display: block;
   margin-top: -3em;
   margin-bottom: 1.5em;
   text-align: center;
 }
-
 
 /* Override third party iframe styles */
 .post-full-content iframe {
@@ -1235,7 +1226,7 @@ Usage (In Ghost editor):
 }
 
 .post-full-content hr:after {
-  content: "";
+  content: '';
   position: absolute;
   top: -15px;
   left: 50%;
@@ -1248,7 +1239,7 @@ Usage (In Ghost editor):
   transform: rotate(45deg);
 }
 
-.post-full-content hr+p {
+.post-full-content hr + p {
   margin-top: 1.2em;
 }
 
@@ -1259,7 +1250,8 @@ Usage (In Ghost editor):
 .post-full-content h5,
 .post-full-content h6 {
   color: color(var(--darkgrey) l(-5%));
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .post-full-content h1 {
@@ -1269,7 +1261,7 @@ Usage (In Ghost editor):
   font-weight: 600;
 }
 
-.post-full-content p+h1 {
+.post-full-content p + h1 {
   margin-top: 0.8em;
 }
 
@@ -1287,7 +1279,7 @@ Usage (In Ghost editor):
   font-weight: 600;
 }
 
-.post-full-content p+h2 {
+.post-full-content p + h2 {
   margin-top: 0.8em;
 }
 
@@ -1306,7 +1298,7 @@ Usage (In Ghost editor):
   font-weight: 600;
 }
 
-.post-full-content h2+h3 {
+.post-full-content h2 + h3 {
   margin-top: 0.7em;
 }
 
@@ -1324,11 +1316,11 @@ Usage (In Ghost editor):
   font-weight: 600;
 }
 
-.post-full-content h2+h4 {
+.post-full-content h2 + h4 {
   margin-top: 0.7em;
 }
 
-.post-full-content h3+h4 {
+.post-full-content h3 + h4 {
   margin-top: 0;
 }
 
@@ -1371,7 +1363,7 @@ Usage (In Ghost editor):
 
 .post-full-content h6 {
   margin: 0.5em 0 0.2em 0;
-  font-size: 2.0rem;
+  font-size: 2rem;
   font-weight: 700;
 }
 
@@ -1455,7 +1447,8 @@ Usage (In Ghost editor):
   width: auto;
   border-spacing: 0;
   border-collapse: collapse;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 1.6rem;
   white-space: nowrap;
   vertical-align: top;
@@ -1463,20 +1456,39 @@ Usage (In Ghost editor):
 
 .post-full-content table {
   -webkit-overflow-scrolling: touch;
-  background: radial-gradient(ellipse at left, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 0 center, radial-gradient(ellipse at right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 100% center;
+  background: radial-gradient(
+        ellipse at left,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(0, 0, 0, 0) 75%
+      )
+      0 center,
+    radial-gradient(
+        ellipse at right,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(0, 0, 0, 0) 75%
+      )
+      100% center;
   background-attachment: scroll, scroll;
   background-size: 10px 100%, 10px 100%;
   background-repeat: no-repeat;
 }
 
 .post-full-content table td:first-child {
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
   background-size: 20px 100%;
   background-repeat: no-repeat;
 }
 
 .post-full-content table td:last-child {
-  background-image: linear-gradient(to left, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
   background-position: 100% 0;
   background-size: 20px 100%;
   background-repeat: no-repeat;
@@ -1497,7 +1509,6 @@ Usage (In Ghost editor):
   padding: 6px 12px;
   border: color(var(--whitegrey) l(-1%) s(-5%)) 1px solid;
 }
-
 
 /* 7.1. Post Byline
 /* ---------------------------------------------------------- */
@@ -1528,7 +1539,6 @@ Usage (In Ghost editor):
   line-height: 1.2em;
   letter-spacing: 0.2px;
   text-transform: uppercase;
-  ;
 }
 
 .post-full-byline-meta h4 {
@@ -1576,7 +1586,8 @@ Usage (In Ghost editor):
   line-height: 1.5em;
   background: white;
   border-radius: 3px;
-  box-shadow: rgba(39, 44, 49, 0.08) 0 12px 26px, rgba(39, 44, 49, 0.06) 1px 3px 8px;
+  box-shadow: rgba(39, 44, 49, 0.08) 0 12px 26px,
+    rgba(39, 44, 49, 0.06) 1px 3px 8px;
   opacity: 0;
   transition: all 0.35s cubic-bezier(0.4, 0.01, 0.165, 0.99);
   transform: scale(0.98) translateY(15px);
@@ -1584,7 +1595,7 @@ Usage (In Ghost editor):
 }
 
 .author-list-item .author-card:before {
-  content: "";
+  content: '';
   position: absolute;
   top: 100%;
   left: 50%;
@@ -1598,7 +1609,7 @@ Usage (In Ghost editor):
 }
 
 .author-list-item .author-card.hovered {
-  opacity: 1.0;
+  opacity: 1;
   transform: scale(1) translateY(0px);
   pointer-events: auto;
 }
@@ -1687,7 +1698,6 @@ Usage (In Ghost editor):
   }
 }
 
-
 /* 7.2. Members Subscribe Form
 /* ---------------------------------------------------------- */
 .subscribe-form {
@@ -1695,7 +1705,10 @@ Usage (In Ghost editor):
   padding: 6.5vw 7vw 8vw;
   border: color(var(--lightgrey) l(+10%)) 1px solid;
   text-align: center;
-  background: linear-gradient(color(var(--whitegrey) l(+6%)), color(var(--whitegrey) l(+4%)));
+  background: linear-gradient(
+    color(var(--whitegrey) l(+6%)),
+    color(var(--whitegrey) l(+4%))
+  );
   border-radius: 3px;
 }
 
@@ -1762,10 +1775,12 @@ Usage (In Ghost editor):
   line-height: 39px;
   font-weight: 400;
   text-align: center;
-  background: linear-gradient(color(var(--blue) whiteness(+7%)),
-      color(var(--blue) lightness(-7%) saturation(-10%)) 60%,
-      color(var(--blue) lightness(-7%) saturation(-10%)) 90%,
-      color(var(--blue) lightness(-4%) saturation(-10%)));
+  background: linear-gradient(
+    color(var(--blue) whiteness(+7%)),
+    color(var(--blue) lightness(-7%) saturation(-10%)) 60%,
+    color(var(--blue) lightness(-7%) saturation(-10%)) 90%,
+    color(var(--blue) lightness(-4%) saturation(-10%))
+  );
   border-radius: 5px;
 
   -webkit-font-smoothing: subpixel-antialiased;
@@ -1821,7 +1836,6 @@ Usage (In Ghost editor):
   display: block;
 }
 
-
 @media (max-width: 650px) {
   .subscribe-form-title {
     font-size: 2.4rem;
@@ -1848,7 +1862,6 @@ Usage (In Ghost editor):
   }
 }
 
-
 /* 7.3. Comments
 /* ---------------------------------------------------------- */
 
@@ -1856,7 +1869,6 @@ Usage (In Ghost editor):
   margin: 0 auto;
   max-width: 840px;
 }
-
 
 /* 7.4. Related posts
 /* ---------------------------------------------------------- */
@@ -1894,7 +1906,7 @@ Usage (In Ghost editor):
 }
 
 .read-next .post-card:hover .post-card-image {
-  opacity: 1.0;
+  opacity: 1;
 }
 
 .read-next .post-card-excerpt {
@@ -1921,7 +1933,10 @@ Usage (In Ghost editor):
   overflow: hidden;
   margin: 0 25px 50px;
   padding: 25px;
-  background: linear-gradient(color(var(--darkgrey) l(+2%)), color(var(--darkgrey) l(-5%)));
+  background: linear-gradient(
+    color(var(--darkgrey) l(+2%)),
+    color(var(--darkgrey) l(-5%))
+  );
   border-radius: 3px;
 }
 
@@ -2065,7 +2080,6 @@ Usage (In Ghost editor):
   }
 }
 
-
 /* 7.5. Koenig Styles
 /* ---------------------------------------------------------- */
 
@@ -2080,7 +2094,7 @@ Usage (In Ghost editor):
 }
 
 /* Preventing full-width image overlap with post image.  */
-.post-full-image+.post-full-content .kg-content *:first-child .kg-image {
+.post-full-image + .post-full-content .kg-content *:first-child .kg-image {
   width: 100%;
 }
 
@@ -2096,10 +2110,10 @@ Usage (In Ghost editor):
   margin: 0.8em 0 2.3em;
 }
 
-.post-full-content h1+figure,
-.post-full-content h2+figure,
-.post-full-content h3+figure,
-.post-full-content h4+figure {
+.post-full-content h1 + figure,
+.post-full-content h2 + figure,
+.post-full-content h3 + figure,
+.post-full-content h4 + figure {
   margin-top: 2em;
 }
 
@@ -2108,13 +2122,13 @@ Usage (In Ghost editor):
 }
 
 .post-full-content figcaption {
-  margin: 1.0em 0 0;
+  margin: 1em 0 0;
   color: color(var(--midgrey) l(-10%));
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 75%;
   line-height: 1.5em;
   text-align: center;
-  ;
 }
 
 .kg-width-full figcaption {
@@ -2131,7 +2145,6 @@ Usage (In Ghost editor):
 .kg-embed-card .fluid-width-video-wrapper {
   margin: 0;
 }
-
 
 @media (max-width: 1040px) {
   .post-full-content .kg-width-full .kg-image {
@@ -2167,10 +2180,10 @@ Usage (In Ghost editor):
   margin: 0 0 0 0.75em;
 }
 
-.kg-gallery-card+.kg-image-card.kg-width-wide,
-.kg-gallery-card+.kg-gallery-card,
-.kg-image-card.kg-width-wide+.kg-gallery-card,
-.kg-image-card.kg-width-wide+.kg-image-card.kg-width-wide {
+.kg-gallery-card + .kg-image-card.kg-width-wide,
+.kg-gallery-card + .kg-gallery-card,
+.kg-image-card.kg-width-wide + .kg-gallery-card,
+.kg-image-card.kg-width-wide + .kg-image-card.kg-width-wide {
   margin: -2.25em 0 3em;
 }
 
@@ -2188,7 +2201,7 @@ Usage (In Ghost editor):
   background: var(--white);
 }
 
-.kg-card+.kg-bookmark-card {
+.kg-card + .kg-bookmark-card {
   margin-top: 0;
 }
 
@@ -2196,7 +2209,8 @@ Usage (In Ghost editor):
   display: flex;
   min-height: 148px;
   color: var(--darkgrey);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   text-decoration: none;
   border-radius: 3px;
   box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.09);
@@ -2281,7 +2295,7 @@ Usage (In Ghost editor):
 }
 
 .kg-bookmark-author:after {
-  content: "•";
+  content: '•';
   margin: 0 6px;
 }
 
@@ -2298,16 +2312,15 @@ Usage (In Ghost editor):
     margin: 0.2em 0 1.3em;
   }
 
-  .post-full-content h1+figure,
-  .post-full-content h2+figure,
-  .post-full-content h3+figure,
-  .post-full-content h4+figure {
+  .post-full-content h1 + figure,
+  .post-full-content h2 + figure,
+  .post-full-content h3 + figure,
+  .post-full-content h4 + figure {
     margin-top: 0.9em;
   }
 }
 
 @media (max-width: 500px) {
-
   .post-full-content .kg-width-wide,
   .post-full-content .kg-width-full {
     margin-right: -5vw;
@@ -2384,7 +2397,7 @@ Usage (In Ghost editor):
   flex-shrink: 0;
   margin: 6px 0 -6px;
   max-width: 46em;
-  font-size: 2.0rem;
+  font-size: 2rem;
   line-height: 1.4em;
   font-weight: 400;
   opacity: 0.8;
@@ -2408,12 +2421,12 @@ Usage (In Ghost editor):
 
 .no-image .author-header-content .author-bio {
   color: var(--midgrey);
-  opacity: 1.0;
+  opacity: 1;
 }
 
 .no-image .author-header-content .author-meta {
   color: var(--midgrey);
-  opacity: 1.0;
+  opacity: 1;
 }
 
 .author-social-link a {
@@ -2439,19 +2452,19 @@ Usage (In Ghost editor):
   padding: 10px 0;
 }
 
-.author-location+.author-stats:before,
-.author-stats+.author-social-link:before,
-.author-social-link+.author-social-link:before {
-  content: "\2022";
+.author-location + .author-stats:before,
+.author-stats + .author-social-link:before,
+.author-social-link + .author-social-link:before {
+  content: '\2022';
   display: inline-block;
   margin: 0 12px;
   color: #fff;
   opacity: 0.6;
 }
 
-.no-image .author-location+.author-stats:before,
-.no-image .author-stats+.author-social-link:before,
-.no-image .author-social-link+.author-social-link:before {
+.no-image .author-location + .author-stats:before,
+.no-image .author-stats + .author-social-link:before,
+.no-image .author-social-link + .author-social-link:before {
   color: var(--midgrey);
 }
 
@@ -2484,7 +2497,6 @@ Usage (In Ghost editor):
     display: none;
   }
 }
-
 
 /* 9. Error Template
 /* ---------------------------------------------------------- */
@@ -2570,7 +2582,6 @@ Usage (In Ghost editor):
   }
 }
 
-
 /* 10. Subscribe Message and Overlay
 /* ---------------------------------------------------------- */
 
@@ -2609,7 +2620,7 @@ Usage (In Ghost editor):
 }
 
 .subscribe-close:before {
-  content: "";
+  content: '';
   position: absolute;
   top: 32px;
   right: 25px;
@@ -2622,7 +2633,7 @@ Usage (In Ghost editor):
 }
 
 .subscribe-close:after {
-  content: "";
+  content: '';
   position: absolute;
   top: 32px;
   right: 25px;
@@ -2750,10 +2761,12 @@ Usage (In Ghost editor):
   line-height: 38px;
   font-weight: 400;
   text-align: center;
-  background: linear-gradient(color(var(--blue) whiteness(+7%)),
-      color(var(--blue) lightness(-7%) saturation(-10%)) 60%,
-      color(var(--blue) lightness(-7%) saturation(-10%)) 90%,
-      color(var(--blue) lightness(-4%) saturation(-10%)));
+  background: linear-gradient(
+    color(var(--blue) whiteness(+7%)),
+    color(var(--blue) lightness(-7%) saturation(-10%)) 60%,
+    color(var(--blue) lightness(-7%) saturation(-10%)) 90%,
+    color(var(--blue) lightness(-4%) saturation(-10%))
+  );
   border-radius: 8px;
 
   -webkit-font-smoothing: subpixel-antialiased;
@@ -2767,7 +2780,6 @@ Usage (In Ghost editor):
 .subscribe-overlay .loading .button-loader {
   top: 5px;
 }
-
 
 /* 11. Site Footer
 /* ---------------------------------------------------------- */
@@ -2808,7 +2820,7 @@ Usage (In Ghost editor):
 }
 
 .site-footer-nav a:before {
-  content: "";
+  content: '';
   position: absolute;
   top: 11px;
   left: -11px;
@@ -2832,7 +2844,6 @@ Usage (In Ghost editor):
     margin-left: 0;
   }
 }
-
 
 /* 12. Dark Mode
 /* ---------------------------------------------------------- */
@@ -2970,11 +2981,19 @@ Usage (In Ghost editor):
   }
 
   .post-full-content table td:first-child {
-    background-image: linear-gradient(to right, var(--darkmode) 50%, color(var(--darkmode) a(0%)) 100%);
+    background-image: linear-gradient(
+      to right,
+      var(--darkmode) 50%,
+      color(var(--darkmode) a(0%)) 100%
+    );
   }
 
   .post-full-content table td:last-child {
-    background-image: linear-gradient(to left, var(--darkmode) 50%, color(var(--darkmode) a(0%)) 100%);
+    background-image: linear-gradient(
+      to left,
+      var(--darkmode) 50%,
+      color(var(--darkmode) a(0%)) 100%
+    );
   }
 
   .post-full-content table th {
@@ -3020,7 +3039,10 @@ Usage (In Ghost editor):
 
   .subscribe-form {
     border: none;
-    background: linear-gradient(color(var(--darkmode) l(-6%)), color(var(--darkmode) l(-3%)));
+    background: linear-gradient(
+      color(var(--darkmode) l(-6%)),
+      color(var(--darkmode) l(-3%))
+    );
   }
 
   .subscribe-form-title {
